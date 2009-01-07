@@ -1,0 +1,205 @@
+adv.py:127:def [01;31mKEYP[00m(s, x):
+adv.py:162:    if [01;31mKEYP[00m(s, key): return
+adv.py:277:  if [01;31mKEYP[00m(s, x): return
+Binary file adv.pyc matches
+adv.py~:125:def [01;31mKEYP[00m(s, x):
+adv.py~:160:    if [01;31mKEYP[00m(s, key): return
+adv.py~:274:  if [01;31mKEYP[00m(s, x): return
+data.py:2710:  if NEARP(s,DWARF)  and  [01;31mKEYP[00m(s,THROW) :
+data.py:3365:      if [01;31mKEYP[00m(s,THROW) :
+data.py:3378:        if [01;31mKEYP[00m(s,THROW) :
+data.py:3388:    if [01;31mKEYP[00m(s,THROW) :
+data.py:3398:      if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWING) :
+data.py:3430:        if [01;31mKEYP[00m(s,THROW) :
+data.py:3438:              if [01;31mKEYP[00m(s,THROW) :
+data.py:3439:                if [01;31mKEYP[00m(s,AXE) :
+data.py:3458:                if [01;31mKEYP[00m(s,SWING) :
+data.py:3462:                  if [01;31mKEYP[00m(s,AXE) :
+data.py:3641:  if EQP(s,I,0)  or  [01;31mKEYP[00m(s,BEAR) :
+data.py:3645:  if [01;31mKEYP[00m(s,VASE) :
+data.py:3653:  if [01;31mKEYP[00m(s,BOTTLE) :
+data.py:3656:  if [01;31mKEYP[00m(s,OIL)  or  [01;31mKEYP[00m(s,WATER) :
+data.py:3659:  if [01;31mKEYP[00m(s,CAGE)  and  HAVEP(s,BIRD) :
+data.py:3661:  if [01;31mKEYP[00m(s,LAMP)  and  EQP(s,LAMP,1)  and   not  BITP(s,HERE,LIT) :
+data.py:3663:  if [01;31mKEYP[00m(s,BIRD) :
+data.py:3757:  if [01;31mKEYP[00m(s,BACK) :
+data.py:3867:  if [01;31mKEYP[00m(s,BACK) :
+data.py:3905:  if [01;31mKEYP[00m(s,BACK) :
+data.py:3941:  if [01;31mKEYP[00m(s,BACK) :
+data.py:4049:  if [01;31mKEYP[00m(s,BACK) :
+data.py:4180:  if [01;31mKEYP[00m(s,BACK) :
+data.py:4220:  if [01;31mKEYP[00m(s,BACK) :
+data.py:4749:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,SAY) :
+data.py:4913:  if [01;31mKEYP[00m(s,BACK) :
+data.py:4928:  if [01;31mKEYP[00m(s,BACK) :
+data.py:4979:    if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWORD) :
+data.py:4989:            if [01;31mKEYP[00m(s,EGGS) :
+data.py:5108:    if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWORD) :
+data.py:5118:            if [01;31mKEYP[00m(s,EGGS) :
+data.py:5233:  if [01;31mKEYP[00m(s,BACK) :
+data.py:5470:  if [01;31mKEYP[00m(s,BACK) :
+data.py:5495:    if [01;31mKEYP[00m(s,CLOSE) :
+data.py:5498:      if [01;31mKEYP[00m(s,OPEN) :
+data.py:5915:  if [01;31mKEYP[00m(s,BACK) :
+data.py:5952:  if [01;31mKEYP[00m(s,NORTH) :
+data.py:5977:  if [01;31mKEYP[00m(s,DOWN) :
+data.py:6051:  if [01;31mKEYP[00m(s,NORTH) :
+data.py:6061:  if [01;31mKEYP[00m(s,SOUTH) :
+data.py:6092:  if [01;31mKEYP[00m(s,BACK) :
+data.py:6336:  if [01;31mKEYP[00m(s,SAY) :
+data.py:6346:    if [01;31mKEYP[00m(s,BLERBI) :
+data.py:6364:  if [01;31mKEYP[00m(s,BIRD) :
+data.py:6367:    if [01;31mKEYP[00m(s,CAGE) :
+data.py:6370:      if [01;31mKEYP[00m(s,BOTTLE) :
+data.py:6373:        if [01;31mKEYP[00m(s,OIL) :
+data.py:6376:          if [01;31mKEYP[00m(s,WATER) :
+data.py:6379:            if [01;31mKEYP[00m(s,CHAIN) :
+data.py:6382:              if [01;31mKEYP[00m(s,BEAR) :
+data.py:6385:                if [01;31mKEYP[00m(s,INVENTORY) :
+data.py:6388:                  if [01;31mKEYP[00m(s,SWORD) :
+data.py:6391:                    if [01;31mKEYP[00m(s,SCEPTRE) :
+data.py:6394:                      if [01;31mKEYP[00m(s,KNIFE) :
+data.py:6433:  if [01;31mKEYP[00m(s,BIRD) :
+data.py:6436:    if [01;31mKEYP[00m(s,CAGE) :
+data.py:6439:      if [01;31mKEYP[00m(s,BOTTLE) :
+data.py:6442:        if [01;31mKEYP[00m(s,OIL)  or  [01;31mKEYP[00m(s,WATER) :
+data.py:6445:          if [01;31mKEYP[00m(s,VASE) :
+data.py:6448:            if [01;31mKEYP[00m(s,VIAL) :
+data.py:6451:              if [01;31mKEYP[00m(s,DJINN) :
+data.py:6454:                if [01;31mKEYP[00m(s,BEAR) :
+data.py:6479:    if [01;31mKEYP[00m(s,NORTH)  or  [01;31mKEYP[00m(s,SOUTH)  or  [01;31mKEYP[00m(s,EAST)  or  [01;31mKEYP[00m(s,WEST)  or  [01;31mKEYP[00m(s,NORTHEAST)  or  [01;31mKEYP[00m(s,NORTHWEST)  or  [01;31mKEYP[00m(s,SOUTHEAST)  or  [01;31mKEYP[00m(s,SOUTHWEST)  or  [01;31mKEYP[00m(s,UP)  or  [01;31mKEYP[00m(s,DOWN)  or  [01;31mKEYP[00m(s,BACK)  or  [01;31mKEYP[00m(s,CAVE)  or  [01;31mKEYP[00m(s,OUT)  or  [01;31mKEYP[00m(s,IN) :
+data.py:6653:  if [01;31mKEYP[00m(s,ROD) :
+data.py:6682:    if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWORD) :
+data.py:6799:  if [01;31mKEYP[00m(s,LAMP) :
+data.py:6849:  if [01;31mKEYP[00m(s,LAMP)  or  EQP(s,STATUS,1) :
+data.py:6859:      if [01;31mKEYP[00m(s,LAMP) :
+data.py:7095:  if [01;31mKEYP[00m(s,TROLL) :
+data.py:7098:    if [01;31mKEYP[00m(s,DWARF) :
+data.py:7101:      if [01;31mKEYP[00m(s,DRAGON) :
+data.py:7104:        if [01;31mKEYP[00m(s,SNAKE) :
+data.py:7107:          if [01;31mKEYP[00m(s,BLOB) :
+data.py:7110:            if [01;31mKEYP[00m(s,BEAR) :
+data.py:7113:              if [01;31mKEYP[00m(s,CLAM)  or  [01;31mKEYP[00m(s,OYSTER) :
+data.py:7116:                if [01;31mKEYP[00m(s,OGRE) :
+data.py:7119:                  if [01;31mKEYP[00m(s,BIRD) :
+data.py:7122:                    if [01;31mKEYP[00m(s,DJINN) :
+data.py:7125:                      if [01;31mKEYP[00m(s,GOBLINS) :
+data.py:7128:                        if [01;31mKEYP[00m(s,BASILISK) :
+data.py:7131:                          if [01;31mKEYP[00m(s,GONG) :
+data.py:7161:    if [01;31mKEYP[00m(s,BEAR) :
+data.py:7172:      if [01;31mKEYP[00m(s,TROLL) :
+data.py:7175:        if [01;31mKEYP[00m(s,SNAKE) :
+data.py:7182:          if [01;31mKEYP[00m(s,DWARF) :
+data.py:7186:            if [01;31mKEYP[00m(s,BIRD) :
+data.py:7189:              if [01;31mKEYP[00m(s,DRAGON) :
+data.py:7195:                if [01;31mKEYP[00m(s,BASILISK) :
+data.py:7201:                  if [01;31mKEYP[00m(s,GOBLINS) :
+data.py:7480:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,MUSHROOM) :
+data.py:7494:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,FOOD) :
+data.py:7569:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,WATER) :
+data.py:7579:    if [01;31mKEYP[00m(s,WATER) :
+data.py:7603:        if [01;31mKEYP[00m(s,MAGAZINES) :
+data.py:7606:          if [01;31mKEYP[00m(s,MESSAGE) :
+data.py:7609:            if [01;31mKEYP[00m(s,TABLET) :
+data.py:7711:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,TURTLE)  and  NEARP(s,TURTLE) :
+data.py:8607:  if [01;31mKEYP[00m(s,SAY) :
+Binary file data.pyc matches
+data.py~:2617:  if NEARP(s,DWARF)  and  [01;31mKEYP[00m(s,THROW) :
+data.py~:3272:      if [01;31mKEYP[00m(s,THROW) :
+data.py~:3285:        if [01;31mKEYP[00m(s,THROW) :
+data.py~:3295:    if [01;31mKEYP[00m(s,THROW) :
+data.py~:3305:      if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWING) :
+data.py~:3337:        if [01;31mKEYP[00m(s,THROW) :
+data.py~:3345:              if [01;31mKEYP[00m(s,THROW) :
+data.py~:3346:                if [01;31mKEYP[00m(s,AXE) :
+data.py~:3365:                if [01;31mKEYP[00m(s,SWING) :
+data.py~:3369:                  if [01;31mKEYP[00m(s,AXE) :
+data.py~:3548:  if EQP(s,I,0)  or  [01;31mKEYP[00m(s,BEAR) :
+data.py~:3552:  if [01;31mKEYP[00m(s,VASE) :
+data.py~:3560:  if [01;31mKEYP[00m(s,BOTTLE) :
+data.py~:3563:  if [01;31mKEYP[00m(s,OIL)  or  [01;31mKEYP[00m(s,WATER) :
+data.py~:3566:  if [01;31mKEYP[00m(s,CAGE)  and  HAVEP(s,BIRD) :
+data.py~:3568:  if [01;31mKEYP[00m(s,LAMP)  and  EQP(s,LAMP,1)  and   not  BITP(s,HERE,LIT) :
+data.py~:3570:  if [01;31mKEYP[00m(s,BIRD) :
+data.py~:3664:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:3774:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:3812:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:3848:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:3956:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:4087:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:4127:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:4656:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,SAY) :
+data.py~:4820:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:4835:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:4886:    if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWORD) :
+data.py~:4896:            if [01;31mKEYP[00m(s,EGGS) :
+data.py~:5015:    if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWORD) :
+data.py~:5025:            if [01;31mKEYP[00m(s,EGGS) :
+data.py~:5140:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:5377:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:5402:    if [01;31mKEYP[00m(s,CLOSE) :
+data.py~:5405:      if [01;31mKEYP[00m(s,OPEN) :
+data.py~:5822:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:5859:  if [01;31mKEYP[00m(s,NORTH) :
+data.py~:5884:  if [01;31mKEYP[00m(s,DOWN) :
+data.py~:5958:  if [01;31mKEYP[00m(s,NORTH) :
+data.py~:5968:  if [01;31mKEYP[00m(s,SOUTH) :
+data.py~:5999:  if [01;31mKEYP[00m(s,BACK) :
+data.py~:6243:  if [01;31mKEYP[00m(s,SAY) :
+data.py~:6253:    if [01;31mKEYP[00m(s,BLERBI) :
+data.py~:6271:  if [01;31mKEYP[00m(s,BIRD) :
+data.py~:6274:    if [01;31mKEYP[00m(s,CAGE) :
+data.py~:6277:      if [01;31mKEYP[00m(s,BOTTLE) :
+data.py~:6280:        if [01;31mKEYP[00m(s,OIL) :
+data.py~:6283:          if [01;31mKEYP[00m(s,WATER) :
+data.py~:6286:            if [01;31mKEYP[00m(s,CHAIN) :
+data.py~:6289:              if [01;31mKEYP[00m(s,BEAR) :
+data.py~:6292:                if [01;31mKEYP[00m(s,INVENTORY) :
+data.py~:6295:                  if [01;31mKEYP[00m(s,SWORD) :
+data.py~:6298:                    if [01;31mKEYP[00m(s,SCEPTRE) :
+data.py~:6301:                      if [01;31mKEYP[00m(s,KNIFE) :
+data.py~:6340:  if [01;31mKEYP[00m(s,BIRD) :
+data.py~:6343:    if [01;31mKEYP[00m(s,CAGE) :
+data.py~:6346:      if [01;31mKEYP[00m(s,BOTTLE) :
+data.py~:6349:        if [01;31mKEYP[00m(s,OIL)  or  [01;31mKEYP[00m(s,WATER) :
+data.py~:6352:          if [01;31mKEYP[00m(s,VASE) :
+data.py~:6355:            if [01;31mKEYP[00m(s,VIAL) :
+data.py~:6358:              if [01;31mKEYP[00m(s,DJINN) :
+data.py~:6361:                if [01;31mKEYP[00m(s,BEAR) :
+data.py~:6386:    if [01;31mKEYP[00m(s,NORTH)  or  [01;31mKEYP[00m(s,SOUTH)  or  [01;31mKEYP[00m(s,EAST)  or  [01;31mKEYP[00m(s,WEST)  or  [01;31mKEYP[00m(s,NORTHEAST)  or  [01;31mKEYP[00m(s,NORTHWEST)  or  [01;31mKEYP[00m(s,SOUTHEAST)  or  [01;31mKEYP[00m(s,SOUTHWEST)  or  [01;31mKEYP[00m(s,UP)  or  [01;31mKEYP[00m(s,DOWN)  or  [01;31mKEYP[00m(s,BACK)  or  [01;31mKEYP[00m(s,CAVE)  or  [01;31mKEYP[00m(s,OUT)  or  [01;31mKEYP[00m(s,IN) :
+data.py~:6560:  if [01;31mKEYP[00m(s,ROD) :
+data.py~:6589:    if [01;31mKEYP[00m(s,AXE)  or  [01;31mKEYP[00m(s,SWORD) :
+data.py~:6706:  if [01;31mKEYP[00m(s,LAMP) :
+data.py~:6756:  if [01;31mKEYP[00m(s,LAMP)  or  EQP(s,STATUS,1) :
+data.py~:6766:      if [01;31mKEYP[00m(s,LAMP) :
+data.py~:7002:  if [01;31mKEYP[00m(s,TROLL) :
+data.py~:7005:    if [01;31mKEYP[00m(s,DWARF) :
+data.py~:7008:      if [01;31mKEYP[00m(s,DRAGON) :
+data.py~:7011:        if [01;31mKEYP[00m(s,SNAKE) :
+data.py~:7014:          if [01;31mKEYP[00m(s,BLOB) :
+data.py~:7017:            if [01;31mKEYP[00m(s,BEAR) :
+data.py~:7020:              if [01;31mKEYP[00m(s,CLAM)  or  [01;31mKEYP[00m(s,OYSTER) :
+data.py~:7023:                if [01;31mKEYP[00m(s,OGRE) :
+data.py~:7026:                  if [01;31mKEYP[00m(s,BIRD) :
+data.py~:7029:                    if [01;31mKEYP[00m(s,DJINN) :
+data.py~:7032:                      if [01;31mKEYP[00m(s,GOBLINS) :
+data.py~:7035:                        if [01;31mKEYP[00m(s,BASILISK) :
+data.py~:7038:                          if [01;31mKEYP[00m(s,GONG) :
+data.py~:7068:    if [01;31mKEYP[00m(s,BEAR) :
+data.py~:7079:      if [01;31mKEYP[00m(s,TROLL) :
+data.py~:7082:        if [01;31mKEYP[00m(s,SNAKE) :
+data.py~:7089:          if [01;31mKEYP[00m(s,DWARF) :
+data.py~:7093:            if [01;31mKEYP[00m(s,BIRD) :
+data.py~:7096:              if [01;31mKEYP[00m(s,DRAGON) :
+data.py~:7102:                if [01;31mKEYP[00m(s,BASILISK) :
+data.py~:7108:                  if [01;31mKEYP[00m(s,GOBLINS) :
+data.py~:7387:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,MUSHROOM) :
+data.py~:7401:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,FOOD) :
+data.py~:7476:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,WATER) :
+data.py~:7486:    if [01;31mKEYP[00m(s,WATER) :
+data.py~:7510:        if [01;31mKEYP[00m(s,MAGAZINES) :
+data.py~:7513:          if [01;31mKEYP[00m(s,MESSAGE) :
+data.py~:7516:            if [01;31mKEYP[00m(s,TABLET) :
+data.py~:7618:  if EQP(s,STATUS,1)  or  [01;31mKEYP[00m(s,TURTLE)  and  NEARP(s,TURTLE) :
+data.py~:8515:  if [01;31mKEYP[00m(s,SAY) :
+Binary file repeat.pyc matches

@@ -1,0 +1,23 @@
+application: colossal-cave
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+# Javascript static files are in /js
+- url: /js
+  static_dir: js
+
+# Style sheets are in /css
+- url: /css
+  static_dir: css
+
+# This is the Json handler for playing the game
+- url: /play/.*
+  script: play.py
+
+# The main pages are served here
+- url: /.*
+  script: pages.py
+
+

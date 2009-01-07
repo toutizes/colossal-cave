@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Colossal Cave (Adventure 5)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/adv.css" />
+    
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/tty.js"></script>
+<script type="text/javascript">
+var terminal;
+
+function sendInput(input_line) {
+  input_line = input_line.replace(/[^a-zA-Z0-9 ]/g, "");
+  if (input_line != "") {
+    ajax("play/step?input=" + encodeURI(input_line), showOutput);
+  }
+}
+
+function showOutput(response) {
+  eval('response=' + response);
+  if (response.full == 1) {
+    terminal.replaceLines(response.lines);
+  } else {
+    terminal.queueLines(response.lines);
+  }
+  document.getElementById("tty_input").focus();
+}
+
+function restartGame() {
+  if (confirm("Restart game from the beginning?\nAll progress will be lost.")){
+    ajax("play/start?new=true", showOutput);
+  } else {
+    document.getElementById("tty_input").focus();
+  }
+}
+
+function backupGame() {
+  if (confirm("Save your game for later?\n" +
+              "This will override your previous save game if you already have one.")) {
+    ajax("play/backup", showOutput);
+  } else {
+    document.getElementById("tty_input").focus();
+  }
+}
+
+function restoreGame() {
+  if (confirm("Restore game from the backup?\nAll progress in current game will be lost.")){
+    ajax("play/restore", showOutput);
+  } else {
+    document.getElementById("tty_input").focus();
+  }
+}
+
+function initialize() {
+  terminal = initTerminal(document.getElementById("tty_input"),
+			  document.getElementById("tty_output"),
+			  72, sendInput);
+  resized();
+  ajax("play/start", showOutput);
+}
+
+
+function scrollTerminalToBottom () {
+}
+
+function resized() {
+  var h = windowHeight() - 10;  // -10  provides a small space at the bottom
+  h -= document.getElementById("myheader").offsetHeight;
+  h -= document.getElementById("myfooter").offsetHeight;
+  if (h < 40) {
+    h = 40;
+  }
+  document.getElementById("tty_output").style.height = h + "px";
+  var mycenter = document.getElementById("mycenter");
+  mycenter.scrollTop = mycenter.scrollHeight;
+}
+</script>
+</head>
+    
+<body onload="initialize();" onresize="resized();">
+
+<div id="myheader">
+ <table width="100%"><tbody><tr>
+ <td>Adventure</td>
+ <td><input type="button" value="Restart Game" onclick="restartGame()" /></td>
+ <td><input type="button" value="Save Game" onclick="backupGame()" /></td>
+ <td><input type="button" value="Restore Game" onclick="restoreGame()" /></td>
+ <td><a href="credits">Credits</a></td>
+ <td align="right">
+    {{ user_name }} <a href="{{ login_url }}">{{ login_url_linktext }}</a>
+ </td>
+ </tr></tbody></table>
+</div>
+
+<div id="mycenter" style="overflow-y: scroll;">
+ <table width="100%"><tbody><tr>
+  <td><div id="tty_output" class="listing"></div></td>
+ </tr></tbody></table>
+</div>
+<div id="myfooter">
+ <table width="100%" class="listing"><tbody><tr>
+  <td>&gt;</td>
+  <td>
+   <input id="tty_input" class="listing" type="text" value=""
+          size="80" maxlength="80" />
+  </td>
+ </tr></tbody></table>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Adventure</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/adv.css" />
+    
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/tty.js"></script>
+<script type="text/javascript">
+var terminal;
+
+function sendInput(input_line) {
+  input_line = input_line.replace(/[^a-zA-Z0-9 ]/g, "");
+  if (input_line != "") {
+    //    ajax("play?input=" + encodeURI(input_line), showOutput);
+    terminal.queueLines(["I heard: " +input_line]);
+  }
+}
+
+function showOutput(response) {
+  eval('response=' + response);
+  if (response.full == 1) {
+    terminal.replaceLines(response.lines);
+  } else {
+    terminal.queueLines(response.lines);
+  }
+}
+
+function initialize() {
+  terminal = initTerminal(document.getElementById("tty_input"),
+			  document.getElementById("mycenter"),
+			  160, sendInput);
+  //  ajax("play?full=1&input=", showOutput);
+  terminal.replaceLines(["hello", "world"]);
+  resized();
+}
+
+function resized() {
+  var h = windowHeight() - 10;  // -10  provides a small space at the bottom
+  h -= document.getElementById("myheader").offsetHeight;
+  h -= document.getElementById("myfooter").offsetHeight;
+  if (h < 40) {
+    h = 40;
+  }
+  document.getElementById("mycenter").style.height = h + "px";
+}
+</script>
+</head>
+    
+<body onload="initialize();" onresize="resized();">
+
+<div id="myheader">
+ <table width="100%"><tbody><tr>
+ <td>Adventure</td>
+ <td align="right">
+    Hello {{ user_name }}
+    <a href="{{ login_url }}">{{ login_url_linktext }}</a>
+ </td>
+ </tr></tbody></table>
+</div>
+
+<div id="mycenter" class="listing" style="overflow-y: scroll;"></div>
+
+<div id="myfooter">
+ <input id="tty_input" class="listing" type="text" value=""
+        size="80" maxlength="132" />
+</div>
+
+</body>
+</html>
