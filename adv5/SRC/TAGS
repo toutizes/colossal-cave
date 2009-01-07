@@ -1,0 +1,532 @@
+
+ADV/ADEFS.H,2960
+#define ADV	12,377
+#define FREEZER	13,397
+#define	INITIAL	14,425
+#define	REPEAT	15,445
+#define	ERROR	16,466
+#define	OBJECTS	17,487
+#define	PLACES	18,509
+#define	VARS	19,530
+#define	SYMTABREC	20,548
+#define MAXKEY	21,573
+#define	MAXOPS	22,596
+#define	BUFSIZE	23,616
+#define	TBUFSIZE	24,638
+#define CACHESIZE	25,661
+#define MAXCACHE	26,684
+#define	TABSIZ	27,707
+#define	LEXSIZ	28,728
+#define	MAXLINE	29,748
+#define	YES	31,772
+#define	NO	32,788
+#define	EOS	33,803
+#define NIL	34,819
+#define	OK	35,854
+#define MATCH	36,869
+#define ADD	38,889
+#define AND	39,906
+#define ANYOF	40,923
+#define APPORT	41,942
+#define AT	42,962
+#define BIC	43,978
+#define BIS	44,995
+#define BIT	45,1012
+#define CALL	46,1029
+#define CHANCE	47,1047
+#define DEFAULT	48,1067
+#define DEPOSIT	49,1088
+#define DIVIDE	50,1109
+#define DROP	51,1129
+#define ELSE	52,1147
+#define EOF	53,1165
+#define EOI	54,1182
+#define EOR	55,1199
+#define EVAL	56,1216
+#define EXEC	57,1234
+#define FIN	58,1252
+#define GET	59,1269
+#define GOTO	60,1286
+#define HAVE	61,1304
+#define IFAT	62,1322
+#define IFEQ	63,1340
+#define IFGE	64,1358
+#define IFGT	65,1376
+#define IFHAVE	66,1394
+#define IFKEY	67,1414
+#define IFLE	68,1433
+#define IFLOC	69,1451
+#define IFLT	70,1470
+#define IFNEAR	71,1488
+#define INPUT	72,1508
+#define ITLIST	73,1527
+#define ITOBJ	74,1547
+#define ITPLACE	75,1566
+#define KEYWORD	76,1587
+#define LDA	77,1608
+#define LOCATE	78,1625
+#define MOVE	79,1645
+#define MULT	80,1663
+#define NAME	81,1681
+#define NEAR	82,1699
+#define NOT	83,1717
+#define OR	84,1734
+#define PROCEED	85,1750
+#define QUERY	86,1771
+#define QUIT	87,1790
+#define RANDOM	88,1808
+#define SAY	89,1828
+#define SET	90,1845
+#define SMOVE	91,1862
+#define STOP	92,1881
+#define SUB	93,1899
+#define SVAR	94,1916
+#define VALUE	95,1934
+#define	LINELEN	97,1955
+#define LEXLEN	98,1975
+#define	MAXCALLS	99,1994
+#define	MAXDOS	100,2015
+#define OBJKEY	102,2036
+#define MAXOBJECTS	103,2058
+#define MAXOTEXT	104,2082
+#define MAXOCODE	105,2103
+#define PLACEKEY	106,2123
+#define MAXPLACES	107,2146
+#define MAXPCODE	108,2169
+#define VERBKEY	109,2189
+#define MAXVERBS	110,2212
+#define MAXVCODE	111,2234
+#define	MOVED	113,2257
+#define	BRIEF	114,2277
+#define	FAST	115,2297
+#define	LOOKING	116,2316
+#define	BEEN	117,2338
+#define	DUAL	118,2357
+#define	XOBJECT	120,2378
+#define	XVERB	121,2404
+#define	XPLACE	122,2428
+#define	BADWORD	123,2453
+#define	INIT	125,2481
+#define	LABEL	126,2498
+#define	VERB	127,2516
+#define	PLACE	128,2533
+#define	TEXT	129,2551
+#define	OBJECT	130,2568
+#define	VARIABLE	131,2587
+#define	NULL	132,2607
+#define	INHAND	134,2626
+#define	REPLACE	135,2648
+#define	NULLTXT	136,2670
+#define	BLANKTXT	137,2693
+#define	OKTXT	138,2716
+#define forever	140,2739
+#define class(142,2767
+#define indx(143,2806
+#define logical(144,2838
+#define opnum(145,2878
+#define where(146,2917
+#define CACHE	148,2959
+struct symstr150,3011
+
+ADV/ADV.C,50
+main 14,399
+int setup 32,595
+int opendb(61,959
+
+ADV/ADVGLOB.C,742
+char opn 14,399
+char ltab[ltab24,616
+struct symstr *symtab symtab33,777
+char clss 45,1220
+char token 63,1371
+int linlen 65,1397
+int linewd 66,1415
+char lex[lex68,1441
+short int objval[objval70,1471
+short int objbit[objbit71,1500
+short int objloc[objloc72,1529
+short int plcbit[plcbit74,1560
+short int varval[varval76,1590
+short int varbit[varbit77,1616
+short int codebuf[codebuf79,1644
+char textbuf[textbuf80,1674
+int nrep,82,1702
+int nrep, ninit,82,1702
+int nrep, ninit, nvars,82,1702
+int nrep, ninit, nvars, nobj,82,1702
+int nrep, ninit, nvars, nobj, nplace 82,1702
+int here,83,1742
+int here, there,83,1742
+int here, there, status,83,1742
+int here, there, status, argwd[argwd83,1742
+int dbunit 85,1787
+
+ADV/CACHE.C,321
+struct ctabstr15,413
+static int full 22,502
+static struct ctabstr ctab[ctab23,526
+static short int cache[cache24,567
+static int cachesize 25,603
+int rdcode 37,931
+static int ok2sav 74,1647
+static int PutCache 98,1986
+static int GetCache 141,2720
+int ClrCache 161,3058
+int wcopy 173,3211
+int pcstat 184,3350
+
+ADV/COMMAND.C,125
+int command 14,399
+int low2up 79,1404
+#undef NULL88,1566
+#undef EOF89,1579
+#define LINESIZE	91,1611
+int readln 93,1635
+
+ADV/CONDITIO.C,63
+int condition 14,399
+int flushc 152,2762
+int query 202,3539
+
+ADV/ERROR.C,18
+int error 15,413
+
+ADV/EXEC.C,95
+int executive 14,399
+int ssw 72,1158
+int svar 88,1384
+int prime 130,1936
+int rnd 135,1973
+
+ADV/PROCESS.C,61
+int process 18,453
+int nextrec 438,7764
+int fini 495,8642
+
+ADV/SAVGM.C,178
+#define READONLY	14,399
+#define WRITEONLY	15,419
+#define READWRITE	16,440
+struct saveb18,463
+struct saveb sb 26,623
+int savgm 28,644
+int resgm 85,1620
+int delgm 129,2305
+
+ADV/SAY.C,119
+int say 14,399
+int sayval 42,784
+int saykey 64,1155
+int saynam 107,1859
+int findnam 141,2509
+int up2low 160,2822
+
+ADV/SHOWOP.C,68
+static char *ops ops14,399
+int CurKey 33,993
+int showop 35,1014
+
+ADV/SYMTAB.C,266
+#define SMEMSIZ	14,399
+static struct symstr smem[smem16,423
+static int psmem 17,461
+int 19,493
+int find 44,906
+int hash 59,1144
+#define CMEMSIZ	70,1311
+static char cmem[cmem72,1336
+static int  pcmem 73,1365
+char *strsav strsav75,1392
+int pstab 93,1683
+
+ADV/UTIL.C,175
+	  int key 17,434
+int eval 26,560
+	int indx 54,912
+	int logical 88,1379
+int movobj 98,1563
+int near 107,1726
+	int opnum 123,1949
+int ref 134,2127
+	int where 144,2261
+
+ADV/VALUES.C,93
+static int powof2[powof214,399
+int bitval 22,570
+int setbit 68,1317
+int setval 105,1879
+
+ADV/WEBSTER.C,20
+int webster 14,399
+
+KIO/CLOSEK.C,19
+int closek 14,397
+
+KIO/CREATK.C,45
+#define READWRITE	14,397
+int creatk 16,420
+
+KIO/DUPK.C,17
+int dupk 14,397
+
+KIO/EFFIC.C,28
+main 14,397
+error 70,1436
+
+KIO/GETBLK.C,19
+int GetBlk 14,397
+
+KIO/GETREC.C,19
+int GetRec 14,397
+
+KIO/KIO.H,178
+#define MAXENTRIES	14,402
+#define MAXIBLK	15,425
+#define EMPTY	16,448
+#define ERROR	17,467
+#define EXISTING	19,488
+#define NEW	20,508
+struct mkey22,526
+struct iblk28,569
+
+KIO/KIOGLOB.C,230
+struct iblk Iblk 14,397
+short int Sblk[Sblk16,419
+char knam[knam18,448
+char knam[20], rnam[rnam18,448
+int Modified 20,477
+int CurBlk 21,497
+long int RecLoc 22,516
+short int IndLoc 23,540
+int kfd 24,564
+int rfd 25,580
+
+KIO/MAKBLK.C,19
+int MakBlk 14,397
+
+KIO/MAKNAM.C,19
+int MakNam 14,397
+
+KIO/MAPBLK.C,24
+long int MapBlk 14,397
+
+KIO/MAPKEY.C,19
+int MapKey 14,397
+
+KIO/OPENK.C,43
+#define READONLY	14,397
+int openk 16,419
+
+KIO/PUTBLK.C,19
+int PutBlk 14,397
+
+KIO/PUTREC.C,24
+long int PutRec 14,397
+
+KIO/READK.C,18
+int readk 14,397
+
+KIO/WRITEK.C,19
+int writek 14,397
+
+MUNGE/BUFFERS.C,294
+#define MAXCBUF	14,399
+#define MAXTBUF	15,421
+static char tbuf[tbuf17,446
+static short int tbp 18,475
+static short int cbuf[cbuf20,505
+static short int cbp 21,539
+int clrcode 23,569
+int appcode 29,616
+int outcode 38,782
+int clrtext 48,1016
+int apptext 54,1063
+int outtext 71,1336
+
+MUNGE/COMPILE.C,180
+int compile 14,399
+static char *ops ops63,1361
+int findop 82,1955
+#define isalnum(111,2392
+int eval 115,2497
+int seval 169,3319
+#define isdigit(195,3693
+int ctoi 197,3736
+
+MUNGE/FIO.C,414
+#undef EOF13,397
+#undef NULL14,409
+#define MAXPB	17,444
+struct files19,465
+static struct files fx[fx26,529
+static char pbuf[pbuf45,881
+static short int pbp 46,908
+static char inbuf[inbuf48,938
+static short int ibp 49,968
+int openf 51,1004
+int closef 73,1409
+int Getc 85,1570
+int Ungetc 123,2129
+int pbstr 132,2282
+int prlist 142,2411
+int error 150,2542
+int errout 165,2903
+int synerr 173,3088
+
+MUNGE/GLOB.C,233
+int inunit 14,399
+char clss 16,423
+char list 34,574
+short int ninit	36,594
+short int nrep	37,618
+short int nvars	38,641
+short int nobj	39,665
+short int nplace 40,688
+char state 42,714
+char token 81,1249
+int dbunit 82,1273
+
+MUNGE/MAJORS.C,530
+static short int nxtint 14,399
+static short int nxtrep 15,434
+static short int nxtlab 16,469
+static short int nxtvrb 17,504
+static short int nxtplc 18,539
+static short int nxttxt 19,574
+static short int nxtobj 20,609
+static short int nxtvar 21,644
+int act 24,683
+int at 78,1676
+int def 113,2310
+int inc 132,2622
+int init 164,3170
+int lab 173,3267
+int null 195,3624
+int obj 210,3870
+int place 271,4883
+int plink 332,5946
+int rep 396,7200
+int syn 406,7297
+int text 430,7689
+int var 456,8074
+int verb 473,8355
+
+MUNGE/MDEFS.H,1499
+#define NEXT	12,377
+#define	OK	13,394
+#define	MAJOR	14,409
+#define	ERROR	15,427
+#define	EOF	16,448
+#define NIL	17,467
+#define	EOS	18,502
+#define	YES	19,518
+#define	NO	20,534
+#define	KEEP	21,549
+#define	RELEASE	22,566
+#define	STDIN	23,586
+#define	STDOUT	24,604
+#define PERCENT	26,625
+#define BLANK	27,647
+#define TAB	28,667
+#define COMMA	29,686
+#define SLASH	30,706
+#define NEWLINE	31,726
+#define ATSIGN	32,749
+#define PLUS	33,770
+#define MINUS	34,789
+#define NULLOBJECT	36,811
+#define LINKPLACE	37,837
+#define SHORTDESC	38,862
+#define LONGDESC	39,883
+#define	MAXLINE	41,905
+#define STATES	42,927
+#define	MAXCOM	43,947
+#define MATCHCOM	44,967
+#define	MAXOPS	45,987
+#define MATCHOPS	46,1007
+#define	ACTION	48,1029
+#define	AT	49,1048
+#define	DEFINE	50,1063
+#define	INCLUDE	51,1082
+#define	INITIAL	52,1102
+#define	LABEL	53,1122
+#define	LIST	54,1140
+#define	NOLIST	55,1157
+#define	NULL	56,1176
+#define	OBJECT	57,1193
+#define	PLACE	58,1212
+#define	REPEAT	59,1231
+#define	SYNON	60,1251
+#define	TEXT	61,1270
+#define	VARIABLE	62,1288
+#define	VERB	63,1309
+#define	MAXOBJECTS	65,1329
+#define MAXOTEXT	66,1353
+#define MAXOCODE	67,1374
+#define	MAXPLACES	68,1394
+#define MAXPCODE	69,1417
+#define	MAXVERBS	70,1437
+#define MAXVCODE	71,1459
+#define MAXKEY	73,1482
+#define	NULLWORD	74,1505
+#define	SYMTABREC	75,1529
+#define	SYMPERREC	76,1554
+#define sep(78,1578
+#define com(79,1642
+#define status(80,1688
+struct symstr82,1733
+extern	char token 105,2107
+
+MUNGE/MUNGE.C,51
+main 14,399
+int makedb 40,750
+int iodone 51,949
+
+MUNGE/PARSE.C,206
+struct cm14,399
+struct cm commnd 20,451
+int parse 41,796
+int getline 54,1020
+int gettok 95,1605
+int major 123,2067
+int exec 145,2397
+#define isalpha(206,3206
+int chkmaj 208,3273
+int skip 222,3526
+
+MUNGE/SYMTAB.C,650
+#define MEMSIZ	14,399
+static struct symstr mem[mem16,423
+static int pmem 17,459
+#define CMEMSIZ	19,489
+static char cmem[cmem21,515
+static int pcmem 22,544
+#define TABSIZ	24,570
+static struct symstr *symtab symtab26,593
+  char *nam nam40,1218
+  int val,41,1233
+  int val, mod 41,1233
+	register struct symstr *p p43,1254
+	int h 44,1284
+	p 53,1490
+	p->s_nam s_nam55,1515
+	p->s_val s_val56,1543
+	p->s_aux s_aux57,1562
+	p->s_mod s_mod58,1579
+	h 60,1600
+	p->s_nxt s_nxt61,1619
+	symtab[symtab62,1644
+struct symstr *lookup lookup67,1684
+int hash 80,1909
+char *strsav strsav91,2052
+int pstab 109,2344
+int wstab 201,4357
+
+MUNGE/UTIL.C,154
+int flushline 14,399
+int type 24,524
+#define STKSIZ	34,651
+static int stack[stack36,672
+static short int sp 37,700
+int push 39,729
+int pop 48,855

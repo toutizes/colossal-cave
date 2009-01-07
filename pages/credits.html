@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Colossal Cave (Adventure 5)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link type="text/css" rel="stylesheet" href="/css/adv.css" />
+    
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript">
+function resized() {
+  var h = windowHeight() - 10;  // -10  provides a small space at the bottom
+  h -= document.getElementById("myheader").offsetHeight;
+  h -= document.getElementById("myfooter").offsetHeight;
+  if (h < 40) {
+    h = 40;
+  }
+  document.getElementById("tty_output").style.height = h + "px";
+//  var mycenter = document.getElementById("mycenter");
+//  mycenter.scrollTop = mycenter.scrollHeight;
+}
+</script>
+</head>
+    
+<body onload="resized();" onresize="resized();">
+
+<div id="myheader">
+ <table width="100%"><tbody><tr>
+ <td>Adventure</td>
+ <td></td>
+ <td></td>
+ <td></td>
+ <td><a href="game">Play Game</a></td>
+ <td align="right">
+    {{ user_name }} <a href="{{ login_url }}">{{ login_url_linktext }}</a>
+ </td>
+ </tr></tbody></table>
+</div>
+
+<div id="mycenter" style="overflow-y: scroll;">
+ <table width="100%"><tbody><tr>
+  <td><div class="listing" id="tty_output">
+<pre>
+<b>Adventure</b>
+Adventure is the most famous fantasy adventure game from the seventies.
+
+The goal of the game is to explore a cave, find treasure, and bring it
+back outside.  You score points by dropping treasure in the building
+close to the starting point in the forest.
+
+The game is text based: You type two words commands and the computer
+tries to follow them.  The whole game is a big puzzle, you often get
+stuck trying to move across obstacles (a fierce snake bars the way),
+getting treasure out of the cave (a note says "You won't get it up the
+steps"), or avoiding death.  One of the difficulties is finding words
+that the computer understands.
+
+The game has a good dose of geeky humor and is not that easy to
+complete.  You will get lost in a twisty maze of passages all alike.
+And yes, it's in Adventure that this sentence originated.
+
+I played one of the older Fortran versions of Adventure in 1979 on a
+Multics system.  My terminal was a <a href="http://www.columbia.edu/acis/history/diablo.jpg">Diablo teletype</a> connected by a 
+1200bps line to the mainframe.
+
+You will re-live a piece of history when you play Adventure.
+
+<b>This Version</b>
+The original version of Adventure was developed by William Crowther.
+Many others contributed improvements over time.  Rick Adam's web site
+has a fascinating <a href="http://www.rickadams.org/adventure/a_history.html">A history of 'adventure'</a> page that is worth a click.
+
+This version is a port of the C version of Adventure 5 to Python and
+the Google App Engine.  The C code includes an interpreter for a
+custom language in which the game is coded.  I wrote a "compiler" that
+translates the custom language into Python.  Another option would have
+been to port the interpreter to Python.
+
+The interface is a simple teletype emulator, written in JavaScript,
+that tries to provide the experience of typing at a slow terminal.
+
+The game state is persistent.  If you leave the game page and return
+later, you will continue were you left off.  You can save one copy of
+the game as a backup, just in case you want to try something silly
+such as jumping off a cliff.  Use the buttons about the terminal output 
+to do that.
+
+<b>More Information</b>
+Rick Adam's Adventure web site at <a href="http://www.rickadams.org/adventure/">http://www.rickadams.org/adventure/</a>
+is where I found and downloaded the C source code for the game.  It
+has great resources, detailed history, downloads, etc.
+
+Wikipedia's <a href="http://en.wikipedia.org/wiki/Adventure_game">Adventure game</a> page is a good reference too.
+
+     Matthieu Devin, December 2008.
+
+</pre>
+</div></td>
+ </tr></tbody></table>
+</div>
+<div id="myfooter">
+ <table width="100%" class="listing"><tbody><tr>
+  <td></td>
+  <td>
+  </td>
+ </tr></tbody></table>
+</div>
+
+</body>
+</html>
