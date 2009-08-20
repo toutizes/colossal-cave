@@ -82,12 +82,14 @@ function resized() {
 
 <div id="myheader">
  <table width="100%"><tbody><tr>
- <td>Adventure</td>
- <td><input type="button" value="Restart Game" onclick="restartGame()" /></td>
- <td><input type="button" value="Save Game" onclick="backupGame()" /></td>
- <td><input type="button" value="Restore Game" onclick="restoreGame()" /></td>
- <td><a href="credits">Credits</a></td>
- <td align="right">
+ <td width="10%"><b>Adventure</b></td>
+ <td width="10%">Play Game</td>
+ <td width="10%"><a href="score">Who? Where?</a></td>
+ <td width="10%"><a href="credits">Credits</a></td>
+ <td><input type="button" value="Restart Game" onclick="restartGame()" />&nbsp;
+<input type="button" value="Save Game" onclick="backupGame()" />&nbsp;
+<input type="button" value="Restore Game" onclick="restoreGame()" /></td>
+ <td align="right" width="20%">
     {{ user_name }} <a href="{{ login_url }}">{{ login_url_linktext }}</a>
  </td>
  </tr></tbody></table>

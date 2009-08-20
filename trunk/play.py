@@ -2,15 +2,16 @@
 #
 # Json interface to the adventure API.
 
-from adv5.python import stepper
+from datetime import datetime
 
 import pickle
 import sys
 import wsgiref.handlers
 
-from google.appengine.ext import webapp
+from adv5.python.stepper import Stepper
 from google.appengine.api import users
 from google.appengine.ext import db
+from google.appengine.ext import webapp
 
 class LogEntry:
   def __init__(self, input, output):
@@ -33,12 +34,17 @@ class State(db.Model):
   saved_state = db.BlobProperty()  # Saved state from stepper
   log = db.BlobProperty()          # pickled Array of LogEntry
   save_name = db.StringProperty()  # Name under which the game is saved
+  # Location of the explorer in the cave
+  location = db.StringProperty(default="nowhere")
+  # Date and time of last move
+  last_played = db.DateTimeProperty(auto_now=True, default=datetime.now())
+  score = db.IntegerProperty(default=0)
 
   def newForUser(username):
     state = State()
     state.username = username
     state.saved_state = None
-    state.stppr = stepper.Stepper(None)
+    state.stppr = Stepper(None)
     state.log_entries = [LogEntry("", state.stppr.get_output())]
     state.save_name = 'save'
     return state
@@ -50,13 +56,14 @@ class State(db.Model):
     found_state = None
     for state in states:
       if state.save_name == save_name:
-        state.stppr = stepper.Stepper(state.saved_state)
+        state.stppr = Stepper(state.saved_state)
         state.log_entries = pickle.loads(state.log)
         return state
     return None
   loadForUser = staticmethod(loadForUser)
 
   def saveForUser(self):
+    self.location = self.stppr.get_location()
     self.saved_state = self.stppr.get_saved_state()
     if len(self.log_entries) > MAX_LOG_SIZE:
       self.log_entries = self.log_entries[-MAX_LOG_SIZE:]
