@@ -72,6 +72,16 @@ class Stepper:
   def get_saved_state(self):
     return pickle.dumps(SavedState(self.state))
 
+  def get_location(self):
+    try:
+      location = var_value(self.state, HERE).short
+      linefeed_index = location.find("\n")
+      if linefeed_index != -1:
+        location = location[0:linefeed_index]
+      return location
+    except:
+      return "Somewhere around Colossal Cave."
+
 def main():
   stepper = Stepper(None)
   print stepper.get_output()
