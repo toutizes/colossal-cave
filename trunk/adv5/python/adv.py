@@ -53,6 +53,7 @@ class SavedState:
   def k2odict(self, kd):
     od = {}
     for (k,v) in kd.iteritems():
+#      print self.k2o(k), self.k2o(v)
       od[self.k2o(k)] = self.k2o(v)
     return od
 
@@ -111,14 +112,17 @@ def get_value(s, x):
     return x
   elif type(x) == Place:
     return x.rank
-  elif type(x) == Object or type(x) == Variable or type(x) == Special:
+  elif type(x) == Object or type(x) == Special or type(x) == Action:
     return s.values.get(x, 0)
+  elif type(x) == Variable:
+    return get_value(s, s.values.get(x, 0))
   else:
     return x
 
 def set_value(s, x, v):
   if type(x) == Object or type(x) == Place or \
-     type(x) == Variable or type (x) == Special:
+     type(x) == Variable or type (x) == Special or \
+     type(x) == Action:
     s.values[x] = v
   else:
     raise Exception(x)
@@ -175,6 +179,8 @@ def get_text(s, v):
       return o.long
   elif type(o) == Verb:
     return o.name
+  elif type(o) == Action:
+    return o.name
   else:
     return "Unknown entry %s" % o
   
@@ -188,7 +194,7 @@ def BITP(s, x, y):
   return (get_bits(s, x) & (1 << y)) != 0
 
 def CHANCEP(s, chance):
-  return get_value(s, chance) > random.randint(0, 100)
+  return get_value(s, chance) >= random.randint(0, 100)
 
 def ATP(s, location):
 #  print HERE, var_value(s, HERE), location, var_value(s, location)
@@ -454,7 +460,9 @@ def QUIT(s):
   raise Quit()
 
 def RANDOM(s, x, mod):
-  set_value(s, x, random.randint(0, 2000000000) % get_value(s, mod))
+  mod_val = get_value(s, mod)
+  if mod_val > 0:
+    set_value(s, x, random.randint(0, 2000000000) % get_value(s, mod))
 
 def REPLYP(s, ignore):
   if "Y" in s.input_words or "YES" in s.input_words:

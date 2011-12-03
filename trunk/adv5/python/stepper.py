@@ -82,23 +82,45 @@ class Stepper:
     except:
       return "Somewhere around Colossal Cave."
 
-def main():
-  stepper = Stepper(None)
+def main(argv):
+  input_file = None
+  output_file = None
+  if len(argv) >= 2:
+    input_file = argv[1]
+  if len(argv) >= 3:
+    output_file = argv[2]
+
+  if input_file:
+    stepper = Stepper(open(input_file).read())
+    stepper.step('look')
+  else:
+    stepper = Stepper(None)
+
   print stepper.get_output()
-  saved_state = stepper.get_saved_state()
+  current_state = stepper.get_saved_state()
 
   while True:
     print "> ",
     input = sys.stdin.readline()[:-1]
+    if not sys.stdin.isatty():
+      print input
 
-    stepper = Stepper(saved_state)
+    if input == 'exit':
+      return
+
+    stepper = Stepper(current_state)
     stepper.step(input)
     output = stepper.get_output()
     if output:
       print output
     if stepper.exited():
       return
-    saved_state = stepper.get_saved_state()
+    current_state = stepper.get_saved_state()
+
+    if output_file:
+      f = open(output_file, 'w')
+      f.write(current_state)
+      f.close()
 
 if __name__ == '__main__':
-  main()
+  main(sys.argv)
