@@ -1,3 +1,10 @@
+Play at the command line:
+ python main.py [load file] [save file]
+
+Recompile:
+ (cd adv5/python; ./compile.sh)
+
+
 State: /game page playing.  Now do restart/load/store of games.
 
 

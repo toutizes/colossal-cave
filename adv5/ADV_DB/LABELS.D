@@ -1251,8 +1251,8 @@ LABEL	WEAPONRY    {Handle attacks with weapons}
 LABEL	PASSPHRASE
 	IFNEAR   SAFE
 	   IFEQ  SAFE,0
-	      IFEQ  STATUS,2
-		 AND
+*	      IFEQ  STATUS,2
+*		 AND
 	      IFEQ  ARG2,PASSWORD
 		 OR
 	      IFEQ  ARG1,PASSWORD
